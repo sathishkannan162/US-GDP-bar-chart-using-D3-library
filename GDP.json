@@ -8,13 +8,7 @@
 "Units":               "Billions of Dollars",
 "Date Range":          "1947-01-01 to 2022-04-01",
 "Last Updated":        "2022-08-25 7:53 AM CDT",
-"Notes":               `BEA Account Code: A191RC
-                     Gross domestic product (GDP), the featured measure of U.S. output, is
-                     the market value of the goods and services produced by labor and
-                     property located in the United States.For more information, see the
-                     Guide to the National Income and Product Accounts of the United States
-                     (NIPA) and the Bureau of Economic Analysis
-                     (http://www.bea.gov/national/pdf/nipaguid.pdf).`,
+"Notes":               "BEA Account Code: A191RC Gross domestic product (GDP), the featured measure of U.S. output, is the market value of the goods and services produced by labor andproperty located in the United States.For more information, see the Guide to the National Income and Product Accounts of the United States (NIPA) and the Bureau of Economic Analysis (http://www.bea.gov/national/pdf/nipaguid.pdf).",
 
 
 "columnNames": ["date","values"],
