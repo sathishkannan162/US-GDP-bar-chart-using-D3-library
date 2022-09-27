@@ -4,5 +4,7 @@ You can use your own data, by replacing the json link in the fetch method. You h
 
 **Attribution**: This chart is an exact replica of freecodecamp project at the url: [https://codepen.io/freeCodeCamp/full/GrZVaM](https://codepen.io/freeCodeCamp/full/GrZVaM) and it was done as a part of coursework of data visualisation on freecodecamp.
 
+Check out the deployed page at URL: [https://sunny-platypus-17e871.netlify.app/](https://sunny-platypus-17e871.netlify.app/).
+
 A Pen created on CodePen.io. Original URL: [https://codepen.io/sathishkannan/pen/QWraZXY](https://codepen.io/sathishkannan/pen/QWraZXY).
 
