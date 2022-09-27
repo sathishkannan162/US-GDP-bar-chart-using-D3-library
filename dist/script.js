@@ -22,7 +22,7 @@ attr("height", 0).
 style("color", "white");
 
 fetch(
-"https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json").
+"https://raw.githubusercontent.com/sathishkannan162/US-GDP-bar-chart-using-D3-library/master/GDP.json").
 
 then(response => response.json()).
 then(data => {
@@ -70,26 +70,20 @@ then(data => {
     return xData(year, month);
   }
 
-  let date = "1939-01-01";
-  let year = formatYear(date);
   let dataset = GDPData.data.map((d, i) => {
     return [...formatYear(d[0]), d[1]];
   });
-  console.log(dataset);
+
 
   const xScale = d3.scaleLinear();
   xScale.domain([d3.min(dataset, d => d[0]), d3.max(dataset, d => d[0])]);
-  console.log(d3.min(dataset, d => d[0]));
-  console.log(d3.max(dataset, d => d[0]));
+
   xScale.range([padding, w - padding]);
 
   const yScale = d3.scaleLinear();
   yScale.domain([0, d3.max(dataset, d => d[2])]);
   yScale.range([h - padding, padding]);
-  console.log(d3.max(GDPData.data, d => d[1]));
-  console.log(xScale(1957));
-  console.log(yScale(500));
-  console.log(xScale(1948) - xScale(1948.25));
+ 
 
   const svg = d3.
   select(".app-background").
