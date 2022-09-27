@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200&family=Raleway:wght@300;400&family=Roboto&display=swap');
+
+$main-font: 'Roboto',sans-serif;
+$svg-xOffset: 250px;
+$svg-yOffset: 80px;
+
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+box-sizing: border-box;
+  margin: 0;
+
+}
+
+.app-background {
+  height: 1000;
+  width: 100%;
+  background-color: gray;
+ 
+  
+}
+
+svg {
+  box-shadow: 0 0 30px black;
+  position: absolute;
+  top: $svg-yOffset;
+  left: $svg-xOffset;
+  
+}
+
+#tooltip {
+  background-color: lightgray;
+  color: black !important;
+  position: absolute;
+  transition: all 500ms ease;
+  transition: opacity 500ms ease-out;
+  font-size: 1.1rem;
+  width: 140px;
+  height: 60px;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0px 0px 20px black;
+
+}
+
+#overlay-bar {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+}
