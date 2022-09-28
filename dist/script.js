@@ -2,7 +2,7 @@ const w = 1000,
 h = 500,
 padding = 50;
 const yOffset = 80;
-const xOffset = 250;
+
 let GDPData;
 const barColor = "orange";
 const overlayBarColor = "white";
@@ -19,7 +19,8 @@ append("div").
 attr("id", "overlay-bar").
 attr("width", 0).
 attr("height", 0).
-style("color", "white");
+style("color", "white").
+style('opacity','0');
 
 fetch(
 "https://raw.githubusercontent.com/sathishkannan162/US-GDP-bar-chart-using-D3-library/master/GDP.json").
@@ -107,29 +108,32 @@ then(data => {
   attr("y", d => yScale(d[2])).
   attr("height", d => h - padding - yScale(d[2])).
   on("mouseover", function (event, d) {
+
     overlay.
     attr("data-date", GDPData.data[dataset.indexOf(d)][0]).
     style("opacity", 1).
-    text(d[1]).
-    style("left", xScale(d[0]) + xOffset + 40 + "px").
-    style("top", h - 150 + yOffset + "px").
+    text(d[1]).  
+    style('top', 300+yOffset+'px').
+    style('left',30+event.clientX+'px').
     append("div").
     text("$" + formatNumber(d[2]) + " billions");
-
+    
     overlayBar.
-    style("left", xScale(d[0])+ xOffset + "px").
     style("background-color", overlayBarColor).
-    style("top", yScale(d[2]) + yOffset + "px").
+    style('top',yScale(d[2])- 5 +yOffset +'px').
+    style('left',event.clientX+'px').
     style("width", xScale(1948.25) - xScale(1948) - 0.02 + "px").
-    style("height", h - padding - yScale(d[2]) + "px");
+    style("height", h - padding - yScale(d[2]) +10 + "px").
+    style('opacity','1');
   }).
   on("mouseout", function (event, d) {
     overlay.text(" ").style("opacity", 0);
     overlayBar.
-    style("left", 0).
-    style("top", 0).
-    attr("height", 0).
-    attr("width", 0);
+    style("left", "0px").
+    style("top", "0px").
+    attr("height", "0px").
+    attr("width", "0px").
+    style('opacity','0');
   });
 
   let overlay = d3.
@@ -161,7 +165,7 @@ then(data => {
   svg.
   append("text").
   attr("x", (w - padding - 450) / 2).
-  attr("y", padding + 50).
+  attr("y", padding).
   text("United States GDP").
   attr("id", "title").
   attr("font-size", 60);
@@ -172,4 +176,10 @@ then(data => {
   .attr('transform','rotate(-90)')
   .attr("x", -280)
   .attr("y", 65);
+
+  svg
+  .append('text')
+  .text('Year')
+  .attr('x',(w-padding)/2)
+  .attr('y',h-padding+30)
 });
