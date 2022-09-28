@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200&family=Raleway:wght@300;400&family=Roboto&display=swap');
 
-$main-font: 'Roboto',sans-serif;
+$main-font: 'poppins',"open sans","sans serif";
 $svg-xOffset: 250px;
 $svg-yOffset: 80px;
+$bg: rgb(78, 140, 203);
 
 
 
 * {
   box-sizing: border-box;
+  font-family: $main-font;
 }
 body {
 box-sizing: border-box;
@@ -18,7 +20,9 @@ box-sizing: border-box;
 .app-background {
   height: 97.5vh;
   width: 100%;
-  background-color: gray;
+  background-color: $bg;
+  display: flex;
+  justify-content: center;
  
   
 }
@@ -26,9 +30,18 @@ box-sizing: border-box;
 svg {
   box-shadow: 0 0 30px black;
   position: absolute;
-  top: $svg-yOffset;
-  left: $svg-xOffset;
+  top: 80px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+
   
+  
+  
+}
+
+
+#title {
+  font-size: 3rem;
 }
 
 #tooltip {

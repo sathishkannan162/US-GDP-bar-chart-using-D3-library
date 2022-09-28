@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200&family=Raleway:wght@300;400&family=Roboto&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "poppins", "open sans", "sans serif";
 }
 
 body {
@@ -11,14 +12,21 @@ body {
 .app-background {
   height: 97.5vh;
   width: 100%;
-  background-color: gray;
+  background-color: rgb(78, 140, 203);
+  display: flex;
+  justify-content: center;
 }
 
 svg {
   box-shadow: 0 0 30px black;
   position: absolute;
   top: 80px;
-  left: 250px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+}
+
+#title {
+  font-size: 3rem;
 }
 
 #tooltip {
