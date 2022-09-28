@@ -19,7 +19,8 @@ append("div").
 attr("id", "overlay-bar").
 attr("width", 0).
 attr("height", 0).
-style("color", "white");
+style("color", "white").
+style('opacity','0');
 
 fetch(
 "https://raw.githubusercontent.com/sathishkannan162/US-GDP-bar-chart-using-D3-library/master/GDP.json").
@@ -121,7 +122,8 @@ then(data => {
     style("background-color", overlayBarColor).
     style("top", yScale(d[2]) + yOffset + "px").
     style("width", xScale(1948.25) - xScale(1948) - 0.02 + "px").
-    style("height", h - padding - yScale(d[2]) + "px");
+    style("height", h - padding - yScale(d[2]) + "px").
+    style('opacity','1');
   }).
   on("mouseout", function (event, d) {
     overlay.text(" ").style("opacity", 0);
@@ -129,7 +131,8 @@ then(data => {
     style("left", 0).
     style("top", 0).
     attr("height", 0).
-    attr("width", 0);
+    attr("width", 0).
+    style('opacity','1');
   });
 
   let overlay = d3.
