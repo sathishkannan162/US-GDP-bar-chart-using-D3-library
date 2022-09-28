@@ -102,7 +102,7 @@ then(data => {
   attr("data-date", (d, i) => GDPData.data[i][0]).
   attr("data-gdp", (d, i) => GDPData.data[i][1]).
   attr("id", d => d[0]).
-  attr("width", xScale(1948.25) - xScale(1948) - 0.6).
+  attr("width", xScale(1948.25) - xScale(1948) - 0.02).
   attr("x", d => xScale(d[0])).
   attr("fill", barColor).
   attr("y", d => yScale(d[2])).
