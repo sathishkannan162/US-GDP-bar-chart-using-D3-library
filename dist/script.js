@@ -117,7 +117,7 @@ then(data => {
     text("$" + formatNumber(d[2]) + " billions");
 
     overlayBar.
-    style("left", xScale(d[0]) + 3 + xOffset + "px").
+    style("left", xScale(d[0])+ xOffset + "px").
     style("background-color", overlayBarColor).
     style("top", yScale(d[2]) + yOffset + "px").
     style("width", xScale(1948.25) - xScale(1948) - 0.02 + "px").
@@ -166,9 +166,10 @@ then(data => {
   attr("id", "title").
   attr("font-size", 60);
 
-  svg.
-  append("text").
-  text("Gross Domestic Product").
-  attr("x", -240).
-  attr("y", 65);
+  svg
+  .append("text")
+  .text("Gross Domestic Product")
+  .attr('transform','rotate(-90)')
+  .attr("x", -280)
+  .attr("y", 65);
 });

@@ -43,6 +43,7 @@ svg {
   padding: 10px 0;
   text-align: center;
   box-shadow: 0px 0px 20px black;
+  pointer-events: none; //this will not allow any pointer events to occur on the tooltip and overlaybar
 
 }
 
@@ -50,6 +51,7 @@ svg {
   position: absolute;
   background-color: white;
   z-index: 1;
+  pointer-events: none;
 }
 
 footer {

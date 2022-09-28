@@ -33,12 +33,14 @@ svg {
   padding: 10px 0;
   text-align: center;
   box-shadow: 0px 0px 20px black;
+  pointer-events: none;
 }
 
 #overlay-bar {
   position: absolute;
   background-color: white;
   z-index: 1;
+  pointer-events: none;
 }
 
 footer {
